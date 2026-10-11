@@ -1,0 +1,30 @@
+{
+  "name": "steadyfix-desktop",
+  "productName": "STEADYFIX CMMS",
+  "version": "1.0.0",
+  "description": "STEADYFIX CMMS for computers (PRO plan)",
+  "main": "main.js",
+  "author": "Maverick's Projects",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "electron-updater": "latest"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.maverickprojects.steadyfix",
+    "productName": "STEADYFIX CMMS",
+    "files": ["main.js", "gateway.js", "package.json", "icon.png"],
+    "win": { "target": "nsis", "icon": "icon.png" },
+    "nsis": { "oneClick": true, "perMachine": false },
+    "mac": { "target": "dmg", "icon": "icon.png", "category": "public.app-category.business" },
+    "linux": { "target": "AppImage", "icon": "icon.png", "category": "Office" },
+    "publish": [{ "provider": "github", "owner": "maveprojects-hash", "repo": "steadyfix-desktop" }]
+  }
+}
