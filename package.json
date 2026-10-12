@@ -1,20 +1,24 @@
 {
   "name": "steadyfix-desktop",
   "productName": "STEADYFIX CMMS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "STEADYFIX CMMS for computers (PRO plan)",
+  "homepage": "https://maveprojects-hash.github.io/steadyfix/",
   "main": "main.js",
-  "author": "Maverick's Projects",
+  "author": {
+    "name": "Maverick's Projects",
+    "email": "support.easyfix@gmail.com"
+  },
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder"
   },
   "dependencies": {
-    "electron-updater": "latest"
+    "electron-updater": "^6.0.0"
   },
   "devDependencies": {
-    "electron": "latest",
+    "electron": ">=40.0.0",
     "electron-builder": "latest"
   },
   "build": {
