@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const { Gateway } = require('./gateway');
 
-const SITE = 'https://maveprojects-hash.github.io/steadyfix/';
+const SITE = 'https://steadyfixcmms.com/';
 const START = SITE + 'maintdesk_login.html';
 const ORIGIN = new URL(SITE).origin;
 const ICON = path.join(__dirname, 'icon.png');
@@ -24,10 +24,11 @@ function isPaypal(u) { return /(^|\.)paypal(objects)?\.com$/.test(u.hostname); }
 function createWin() {
   win = new BrowserWindow({
     width: 1280, height: 860, minWidth: 420, minHeight: 600,
-    title: 'STEADYFIX CMMS', backgroundColor: '#1b2831', autoHideMenuBar: true,
+    title: 'STEADYFIX CMMS \u2014 Maintain excellence.', backgroundColor: '#1b2831', autoHideMenuBar: true,
     icon: ICON, show: !startHidden,
     webPreferences: { partition: 'persist:steadyfix', contextIsolation: true, nodeIntegration: false, sandbox: true },
   });
+  win.on('page-title-updated', (e) => e.preventDefault());
   win.webContents.setUserAgent(win.webContents.getUserAgent() + ' STEADYFIXDesktop/' + app.getVersion());
 
   win.webContents.setWindowOpenHandler(({ url }) => {

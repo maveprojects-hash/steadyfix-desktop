@@ -1,13 +1,13 @@
 {
   "name": "steadyfix-desktop",
   "productName": "STEADYFIX CMMS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "STEADYFIX CMMS for computers (PRO plan)",
   "homepage": "https://maveprojects-hash.github.io/steadyfix/",
   "main": "main.js",
   "author": {
     "name": "Maverick's Projects",
-    "email": "support.easyfix@gmail.com"
+    "email": "support@steadyfixcmms.com"
   },
   "license": "UNLICENSED",
   "scripts": {
